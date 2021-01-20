@@ -1,6 +1,4 @@
-let arr1 = ["Apple", "Pear", "Banana"];
-let arr2 = arr1;
-console.log(arr2);
+let arr = [1, 2, 3, 4];
+let emptyArray = [];
 
-arr1.push("Cherry");
-console.log(arr2);
+emptyArray.push(1, 2, 3, 4);
