@@ -9,9 +9,14 @@ class Circle {
         this.yPos += yOffset;
     }
     get surface() {
-        return 2 * Math.PI * radius;
+        return Math.PI * Math.pow(this.radius, 2);
     }
 }
 
-let circleSurface = new Circle(0, 0, 6);
-console.log(circleSurface.surface);
+let circle = new Circle(0, 0, 10);
+console.log(circle);
+console.log("The circle surface is: " + circle.surface);
+//The circle will just change position, not surface.
+circle.move(8, 10);
+console.log("If you move the circle of x8 and y10, the circle cordinates will become :");
+console.log(circle);
