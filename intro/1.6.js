@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync");
 
-let x = readlineSync.question('Can you give me a number?');
-let y = readlineSync.question('Can you give me another one?');
+let x = Number (readlineSync.question('Can you enter an integer?'));
+let y = Number (readlineSync.question('Can you enter another one?'));
 
-console.log(x/y);
+console.log(Math.trunc(x)/Math.trunc(y));

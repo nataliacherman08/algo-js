@@ -1,7 +1,7 @@
 const readlineSync = require("readline-sync");
 
-let x = readlineSync.question('Can you give me your shoe size?');
-let y = readlineSync.question('Can you give me your birth year?');
+let x = Number (readlineSync.question('Can you enter your shoe size?'));
+let y = Number (readlineSync.question('Can you enter your birth year?'));
 
 let a = x*2;
 let b = a+5;

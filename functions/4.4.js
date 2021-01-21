@@ -37,16 +37,16 @@ console.log(average(myArray));
 
 
 //MINIMUM
-    function min(arr) {
-        minimum = Math.min.apply(null, myArray);
+function min(arr) {
+    minimum = Math.min.apply(null, myArray);
         return minimum;
     }
     console.log('The minimum is : '+min(myArray));
     
     
 //MAXIMUM
-    function max(arr) {
-        maximum = Math.max.apply(null, myArray);
+function max(arr) {
+    maximum = Math.max.apply(null, myArray);
         return maximum;
     }
     console.log('The maximum is : '+max(myArray));
