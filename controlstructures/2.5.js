@@ -1,8 +1,10 @@
-const readlineSync = require("readline-sync");
+const readlineSync = require('readline-sync');
 
-let x = readlineSync.question('Can you give me your favourite number?');
+let n = Number(readlineSync.question("What's your favourite number?"));
 
-if (x!=42) {
-    console.log("Are you sure?");
-    let x = readlineSync.question('Can you give me your favorite number?');
+while (n!=42){
+    let n = Number(readlineSync.question("Are you sure? What's your favourite number?"));
+    if (n===42){
+        break;
+}
 }

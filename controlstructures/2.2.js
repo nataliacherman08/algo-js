@@ -1,13 +1,12 @@
 const readlineSync = require("readline-sync");
+let a = readlineSync.question("Can you enter a number that you will consider as your minimum?");
+let b = readlineSync.question("Can you enter a number that you will consider as your maximum?");
+let c = readlineSync.question("Can you enter a current number?");
 
-let x = readlineSync.question('Can you give a minimal number?');
-let y = readlineSync.question('Can you give a maximal number?');
-let z = readlineSync.question('Can you give a current number?');
+if ((c<b) && (c>a)) {
+  console.log("The current number is between the minimum and the maximum.");
+} else if (a>b) {
+  console.log("Error. The minimum is greater than the maximum.");
+} else {
 
-if ((z > x) && (z < y)) {
-    console.log("The current number is between min and max.");
-} else if ( x > y) { 
-    console.log("ERROR. The min is supposed to be smaller than the max.");
-  } else {
-    console.log("ERROR. The current number is supposed to be between the min and the max.");
-  }
+}
