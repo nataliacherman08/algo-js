@@ -1,4 +1,4 @@
 const arr = [100, 101, 102];
-let total = 0;
-for (i of arr) total += i;
-console.log(`The amount is ${total}`);
+let sum = 0;
+for (i of arr) sum += i;
+console.log(`The amount is ${sum}`);
