@@ -1,4 +1,10 @@
-const arr = [1, 2, 3, 4, 5];
-let total = 0;
-for (e of arr) total += e;
-console.log(`The amount is ${total/arr.length}`);
+let arr = [1,2,3,4,5];
+var total = 0;
+var count = 0;
+
+for(var i = 0; i < someArray.length; i++){
+    total += someArray[i];
+    count++;
+}
+
+console.log(total / count);
