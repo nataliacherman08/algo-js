@@ -1,4 +1,2 @@
-const arr = [1, 2, 3, 4, 5];
-let sum = 0;
-for (e of arr) sum += e;
-console.log(`The amount is ${sum}`);
+let arr = [1, 2, 3, 4, 5];
+console.log([1, 2, 3, 4, 5].reduce((a, b) => a + b, 0));
