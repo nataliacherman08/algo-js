@@ -13,7 +13,7 @@ class Circle {
     }
 }
 
-let circle = new Circle(0, 0, 10);
+let circle = new Circle(0, 0, 7);
 console.log(circle);
 console.log("The circle surface is: " + circle.surface);
 
