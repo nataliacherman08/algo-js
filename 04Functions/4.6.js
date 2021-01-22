@@ -6,4 +6,4 @@ function factorial(a)
   }
   return a * factorial(a-1);
 }
-console.log(factorial(3));
+console.log(factorial(4));
