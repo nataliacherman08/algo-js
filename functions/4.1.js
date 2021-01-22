@@ -6,7 +6,7 @@ function calcSurface (x,y) {
     return x*y;
 }
 
-console.log(calcSurface(x,y));
+console.log("The surface of the rectangle is: " + calcSurface(x,y));
 
 // The surface of a rectangle is calculated by multiplying the width with the length.
 // I assigned a length (by asking it to the user) to x and a width to y.
