@@ -1,20 +1,20 @@
 const readlineSync = require("readline-sync");
+let n = Number(readlineSync.question("How many numbers would you like to generate ?"));
 
-let n = new Number(readlineSync.question('Can you give a number of element between 1 and 10?'));
+function rand10(min,max) {
+    min = Math.ceil(1);
+    max = Math.floor(10);
+    return Math.floor(Math.random() * (max - min +1)) + min;
+  }
 
-function multiRand(arr){
-    for (let i=0 ; i<arr; i++){
-        temp = rand10();
-        arr.push(temp);
+//console.log(rand10());
+
+function multiRand(n) {
+    for (let i=0; i < n; i++) {
+        arr.push([i]);
     }
-    return arr;
+    rand10(n);
+    return arr[i];
 }
 
-
-function rand10(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * 10) + 1;
-}
-
-console.log(multiRand(n));
+console.log(multiRand());
