@@ -1,52 +1,47 @@
 const readlineSync = require("readline-sync");
-/*sumArray = sum of an array's elements
-myAverage = average of an array's elements
-myArray = it's the generated array*/
+let arr = Number(readlineSync.question("How many numbers between 1 and 10 would you like to generate ?"));
+let numbers = new Array;
 
-let arr = new Number(readlineSync.question('Can you give a number of element between 1 and 10?'));
-let sumArray = 0;
-let myArray = new Array;
-
-function multiRand(arr){
-    for (let i=0 ; i<arr; i++){
-        temp = rand10();
-        myArray.push(temp);
-    }
-    return myArray;
-}
-console.log(multiRand(arr));
-
-
+//Function to generate random numbers
 function rand10(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * 10) + 1;
+    min = Math.ceil(1);
+    max = Math.floor(10);
+    return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
+//Amount of numbers generated
+function multiRand(arr) {
+    for (let i=0 ; i<arr; i++) {
+        numbers.push(rand10());
+    }
+    return numbers;
+}
+console.log("Here are the generated numbers: "+ multiRand(arr));
 
 
 //AVERAGE
+let sum = 0;
 function average(arr) {
-    for (let e=0 ; e < myArray.length; e++){
-        sumArray = new Number(sumArray + myArray[e]);
-        myAverage = sumArray/myArray.length;
+    for (let i=0 ; i< numbers.length; i++){
+        sum = new Number(sum + numbers[i]);
+        nAverage = sum/numbers.length;
     }
-    return myAverage;
+    return nAverage;
 }
-console.log(average(myArray));
+console.log('The average of this numbers is: '+ average(numbers));
 
 
 //MINIMUM
 function min(arr) {
-    minimum = Math.min.apply(null, myArray);
+    minimum = Math.min.apply(null, numbers);
         return minimum;
-    }
-    console.log('The minimum is : '+min(myArray));
+}
+console.log('The minimum is : '+min(numbers));
     
     
 //MAXIMUM
 function max(arr) {
-    maximum = Math.max.apply(null, myArray);
+    maximum = Math.max.apply(null, numbers);
         return maximum;
-    }
-    console.log('The maximum is : '+max(myArray));
+}
+console.log('The maximum is : '+max(numbers));
