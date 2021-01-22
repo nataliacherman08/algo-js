@@ -23,7 +23,7 @@ console.log("Here are the generated numbers: "+ multiRand(arr));
 let sum = 0;
 function average(arr) {
     for (let i=0 ; i< numbers.length; i++){
-        sum = new Number(sum + numbers[i]);
+        sum = sum + numbers[i];
         nAverage = sum/numbers.length;
     }
     return nAverage;
