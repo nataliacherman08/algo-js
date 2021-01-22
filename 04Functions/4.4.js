@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync");
-let arr = Number(readlineSync.question("How many numbers between 1 and 10 would you like to generate ?"));
-let numbers = new Array;
+let n = Number(readlineSync.question("How many numbers between 1 and 10 would you like to generate ?"));
+let arr = new Array;
 
 //Function to generate random numbers
 function rand10(min, max) {
@@ -10,38 +10,38 @@ function rand10(min, max) {
 }
 
 //Amount of numbers generated
-function multiRand(arr) {
-    for (let i=0 ; i<arr; i++) {
-        numbers.push(rand10());
+function multiRand(n) {
+    for (let i=0 ; i<n; i++) {
+        arr.push(rand10());
     }
-    return numbers;
+    return arr;
 }
-console.log("Here are the generated numbers: "+ multiRand(arr));
+console.log("Here are the generated numbers: "+ multiRand(n));
 
 
 //AVERAGE
 let sum = 0;
 function average(arr) {
-    for (let i=0 ; i< numbers.length; i++){
-        sum = sum + numbers[i];
-        nAverage = sum/numbers.length;
+    for (let i=0 ; i<arr.length; i++){
+        sum = sum + arr[i];
+        nAverage = sum/arr.length;
     }
     return nAverage;
 }
-console.log('The average of this numbers is: '+ average(numbers));
+console.log('The average of this numbers is: '+ average(arr));
 
 
 //MINIMUM
 function min(arr) {
-    minimum = Math.min.apply(null, numbers);
+    minimum = Math.min.apply(null, arr);
         return minimum;
 }
-console.log('The minimum is : '+min(numbers));
+console.log('The minimum is : '+min(arr));
     
     
 //MAXIMUM
 function max(arr) {
-    maximum = Math.max.apply(null, numbers);
+    maximum = Math.max.apply(null, arr);
         return maximum;
 }
-console.log('The maximum is : '+max(numbers));
+console.log('The maximum is : '+max(arr));
